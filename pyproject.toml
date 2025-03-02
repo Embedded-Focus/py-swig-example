@@ -1,0 +1,27 @@
+[project]
+name = "py-swig-example"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ipdb>=0.13.13",
+    "pyright>=1.1.396",
+    "pytest>=8.3.4",
+    "ruff>=0.9.9",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["modules", "build/_CPack_Packages/Linux/ZIP/py-swig-example-0.1.0-Linux"]
+testpaths = ["tests"]
+log_cli = true
+log_cli_level = "INFO"
+addopts = "--pdbcls=IPython.terminal.debugger:TerminalPdb"
+filterwarnings = [
+    "ignore:builtin type swigvarlink",
+    "ignore:builtin type SwigPyObject",
+    "ignore:builtin type SwigPyPacked"
+]
