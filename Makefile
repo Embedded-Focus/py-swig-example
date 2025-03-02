@@ -3,7 +3,11 @@ all: build/_CPack_Packages/Linux/ZIP/py-swig-example-0.1.0-Linux.zip
 build:
 	mkdir -p build
 
-build/src/_py_example.so: CMakeLists.txt src/CMakeLists.txt src/example.c src/example.h src/example.i | build
+build/src/_py_example.so: CMakeLists.txt \
+	src/CMakeLists.txt \
+	src/example/example.c \
+	src/example/example.h \
+	src/example/example.i | build
 	cmake -S . -Bbuild -GNinja
 	bear -- cmake --build build
 
