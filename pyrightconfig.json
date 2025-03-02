@@ -1,5 +1,5 @@
 {
   "extraPaths": [
-    "build/_CPack_Packages/Linux/ZIP/py-swig-example-0.1.0-Linux"
+    "build/_CPack_Packages/Linux/ZIP/py-swig-example-0.1.0-Linux/example",
   ]
 }

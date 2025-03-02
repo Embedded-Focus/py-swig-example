@@ -15,7 +15,10 @@ dev = [
 ]
 
 [tool.pytest.ini_options]
-pythonpath = ["modules", "build/_CPack_Packages/Linux/ZIP/py-swig-example-0.1.0-Linux"]
+pythonpath = [
+    "modules",
+    "build/_CPack_Packages/Linux/ZIP/py-swig-example-0.1.0-Linux/example",
+]
 testpaths = ["tests"]
 log_cli = true
 log_cli_level = "INFO"

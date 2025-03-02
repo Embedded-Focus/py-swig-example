@@ -3,4 +3,4 @@ if command -v uv >/dev/null 2>&1; then
     . .venv/bin/activate
 fi
 
-export LD_LIBRARY_PATH=build/_CPack_Packages/Linux/ZIP/py-swig-example-0.1.0-Linux
+export LD_LIBRARY_PATH=build/_CPack_Packages/Linux/ZIP/py-swig-example-0.1.0-Linux/example
