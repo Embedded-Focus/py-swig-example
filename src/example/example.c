@@ -12,14 +12,8 @@ Handler alloc_something(void) {
   return result;
 }
 
-void set_something(Handler handler, int value) {
-  handler->value = value;
-}
+void set_something(Handler handler, int value) { handler->value = value; }
 
-int get_something(Handler handler) {
-  return handler->value;
-}
+int get_something(Handler handler) { return handler->value; }
 
-void free_something(Handler handler) {
-  free(handler);
-}
+void free_something(Handler handler) { free(handler); }
