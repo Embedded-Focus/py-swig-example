@@ -1,13 +1,12 @@
 from collections.abc import Generator
 from contextlib import contextmanager
-from dataclasses import dataclass
 
 import example
 
 
-@dataclass
 class ExampleHandler:
-    _h: example.Handler
+    def __init__(self, h) -> None:
+        self._h = h
 
     @property
     def something(self) -> int:
@@ -20,7 +19,7 @@ class ExampleHandler:
 
 @contextmanager
 def example_handler() -> Generator[ExampleHandler, None, None]:
-    h: example.Handler | None = None
+    h = None
     try:
         h = example.alloc_something()
         if h is None:
@@ -29,4 +28,5 @@ def example_handler() -> Generator[ExampleHandler, None, None]:
     finally:
         if h is None:
             return
+
         example.free_something(h)
