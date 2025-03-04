@@ -16,7 +16,7 @@ build/_CPack_Packages/Linux/ZIP/py-swig-example-0.1.0-Linux.zip: build/src/_py_e
 
 .PHONY: test
 test: build/_CPack_Packages/Linux/ZIP/py-swig-example-0.1.0-Linux.zip
-	pytest -vv
+	pytest -svv
 
 .PHONY: clean
 clean:
